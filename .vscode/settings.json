@@ -1,0 +1,50 @@
+{
+  // 默认格式化工具
+  "[yaml]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[markdown]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode",
+    "editor.formatOnSave": true
+  },
+  "[json]": {
+    "editor.defaultFormatter": "esbenp.prettier-vscode"
+  },
+
+  // 自动保存 + 格式化
+  "editor.formatOnSave": true,
+  "editor.formatOnPaste": true,
+  "editor.codeActionsOnSave": {
+    "source.fixAll": true
+  },
+
+  // 统一缩进为 2 空格（适合 YAML 与 Markdown）
+  "editor.tabSize": 2,
+  "editor.insertSpaces": true,
+
+  // 自动识别项目 Hugo 模块结构
+  "files.associations": {
+    "*.html": "html",
+    "*.yaml": "yaml",
+    "*.toml": "toml",
+    "*.md": "markdown"
+  },
+
+  // 忽略 Hugo 构建输出和缓存
+  "files.exclude": {
+    "**/public": true,
+    "**/.hugo_build.lock": true,
+    "**/.DS_Store": true
+  },
+
+  // 插件推荐（首次打开项目会提示安装）
+  "extensions.ignoreRecommendations": false,
+  "extensions.recommendations": [
+    "esbenp.prettier-vscode",
+    "redhat.vscode-yaml",
+    "yzhang.markdown-all-in-one",
+    "bep.hugo-language-server",
+    "ritwickdey.LiveServer"
+  ]
+}
